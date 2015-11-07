@@ -14,7 +14,6 @@ Source0:	http://bucardo.org/downloads/check_postgres-%{version}.tar.gz
 # Source0-md5:	0ac4a8bae7b633fbfacdf58be5a1975f
 Source1:	%{plugin}.cfg
 URL:		https://bucardo.org/wiki/Check_postgres
-BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.654
 Requires:	nagios-common
