@@ -47,6 +47,7 @@ cp %{plugin}.pl %{plugin}
 #%patch0 -p1
 
 %{__sed} -i -e 's,/usr/local/nagios/perl/lib,%{plugindir},' %{plugin}
+%{__sed} -i -e '1s,^#!.*perl,#!%{__perl},' %{plugin}
 
 cat > %{plugin}.cfg <<'EOF'
 # Usage:
