@@ -1,6 +1,6 @@
 # TODO:
-#	Add docs
-#	Fix service file
+# - Add docs
+# - Fix service file
 # - check_postgres.cfg - add working sample!
 %define		plugin	check_postgres
 %include	/usr/lib/rpm/macros.perl
@@ -8,7 +8,7 @@ Summary:	Nagios plugin to check postgresql
 Summary(pl.UTF-8):	Wtyczka Nagiosa sprawdzająca Postgresql
 Name:		nagios-plugin-%{plugin}
 Version:	2.22.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Networking
 Source0:	http://bucardo.org/downloads/check_postgres-%{version}.tar.gz
@@ -18,6 +18,8 @@ URL:		https://bucardo.org/wiki/Check_postgres
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.654
 Requires:	nagios-common
+# which is needed to locate psql in some cases (under nagios user)
+Requires:	which 
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
