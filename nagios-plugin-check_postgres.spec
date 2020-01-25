@@ -3,7 +3,6 @@
 # - Fix service file
 # - check_postgres.cfg - add working sample!
 %define		plugin	check_postgres
-%include	/usr/lib/rpm/macros.perl
 Summary:	Nagios plugin to check postgresql
 Summary(pl.UTF-8):	Wtyczka Nagiosa sprawdzająca Postgresql
 Name:		nagios-plugin-%{plugin}
